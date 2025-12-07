@@ -18,7 +18,22 @@
         "operationId": "get_new-endpoint",
         "responses": {
           "200": {
-            "description": "Successful response"
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            }
           }
         },
         "parameters": [
@@ -28,7 +43,8 @@
             "schema": {
               "type": "number"
             },
-            "description": "limit value!"
+            "description": "limit value!",
+            "required": true
           }
         ]
       }
